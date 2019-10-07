@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === true">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>  
+      <a mat-list-item routerLink="/">DASHBOARD</a>
+      <a mat-list-item routerLink="DSUR">DSUR</a>
+      <a mat-list-item routerLink="#">SASR</a>
+      <a mat-list-item routerLink="#">APR</a>
+      <a mat-list-item routerLink="#">RMP</a>
+      <a mat-list-item routerLink="#">PSUR</a>
+      <a mat-list-item routerLink="#">DILS</a>
+      <a mat-list-item routerLink="#">PRAC</a>
+      <a mat-list-item routerLink="#">SAFETY GOVERNANCE</a>
+      <a mat-list-item routerLink="#">SIGNAL MANAGEMENT</a>
+      <a mat-list-item routerLink="#">SDEA</a>
+      <a mat-list-item routerLink="#">QUALITY & COMPLIANCE</a>
+      <a mat-list-item routerLink="#">LICENSE MANAGEMENT</a>
+      <a mat-list-item routerLink="#">ADMIN</a>
+      <a mat-list-item routerLink="#">SUPER ADMIN</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="height-auto">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button> 
+      <app-main-nav-list class="width-100 m-l-n-xs overflow-hidden" ng-controller="navController"></app-main-nav-list>   
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content> 
+</mat-sidenav-container> 

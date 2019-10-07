@@ -1,0 +1,197 @@
+/* You can add global styles to this file, and also import other style files */
+$columnNumber: 4;
+$headerFooterBG: #146484; 
+
+html, body { height: 95%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.app-main-content{
+    background-color: #efefef;
+    margin-top: 0;
+    margin-bottom: -16px;
+    height: 97.3%;
+}
+
+.quartica_logo{ 
+    width: 141px; 
+    height: 32px; 
+    float: right;
+    margin: 10px 5px 0 0;
+}
+.main-footer{
+    background-color: $headerFooterBG;  
+    height: 28px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+    p{
+        margin:0
+    }
+}
+.mat-toolbar.mat-primary { 
+    background-color: $headerFooterBG; 
+}
+
+.height-auto{
+    height: auto !important;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.m-l-n-xs{
+    margin-left: -5px !important;
+}
+
+mat-sidenav-content,
+mat-sidenav{
+    background-color: #efefef;
+    .mat-toolbar-single-row{
+        background: #146484 !important; 
+    }
+}
+app-main-nav-list{ 
+    .list-group{
+        list-style: none;  
+        display: flex;
+        padding-left: 0 !important;
+        margin: 0; 
+        li{ 
+            font-size: 16px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            a{
+                padding: 22px 12px;
+                text-decoration: none;
+                color: white;
+                font-family: Helvetica, sans-serif;
+            }
+        }
+    }
+} 
+
+::-webkit-scrollbar,
+::-webkit-scrollbar:horizontal{
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.25); 
+    border-radius: 5px;
+} 
+ 
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 10px;
+    background-color: #00a3e8; 
+} 
+
+
+.list-group li.active{
+    background-color: #efefef;
+    a{color: $headerFooterBG}
+}
+
+@media screen and (max-device-width: 1600px) and (orientation:portrait){
+    app-main-nav-list{ 
+        margin: 0;
+        padding: 5px;
+        .list-group{
+            list-style: none; 
+            padding: 0;
+            display: block;
+            -moz-column-count: $columnNumber;
+            -moz-column-gap: 0;
+            -webkit-column-count: $columnNumber;
+            -webkit-column-gap: 0;
+            column-count: $columnNumber;
+            column-gap: 7px;
+            white-space: normal;
+            li{ 
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border: 1px solid #3f92af;
+                a{
+                    padding: 10px 10px; 
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-device-width: 1600px) and (orientation:landscape){
+    app-main-nav-list{ 
+        margin: 0;
+        padding: 5px;
+        .list-group{
+            list-style: none; 
+            padding: 0;
+            display: block;
+            -moz-column-count: $columnNumber;
+            -moz-column-gap: 0;
+            -webkit-column-count: $columnNumber;
+            -webkit-column-gap: 0;
+            column-count: $columnNumber;
+            column-gap: 7px;
+            white-space: normal;
+            li{ 
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border: 1px solid #3f92af;
+                a{
+                    padding: 10px 10px; 
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    app-main-nav-list{ 
+        margin: 0;
+        padding: 5px;
+        .list-group{
+            list-style: none; 
+            padding: 0;
+            display: block;
+            -moz-column-count: $columnNumber;
+            -moz-column-gap: 0;
+            -webkit-column-count: $columnNumber;
+            -webkit-column-gap: 0;
+            column-count: $columnNumber;
+            column-gap: 7px;
+            white-space: normal;
+            li{ 
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border: 1px solid #3f92af;
+                a{
+                    padding: 10px 10px; 
+                }
+            }
+        }
+    } 
+}
+@media screen and (max-device-width: 960px) and (orientation:landscape){
+    app-main-nav-list{ 
+        display: none;
+    }
+}
+@media screen and (max-device-width: 590px) and (orientation:portrait){
+    app-main-nav-list{ 
+        display: none;
+    }
+}
